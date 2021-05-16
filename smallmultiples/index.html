@@ -204,7 +204,7 @@
 		];
 
 		var bins = d3.histogram()
-		.domain(hist_scale.domain())
+		.domain(d3.max(data, function(d) { return +d.price })
 		.thresholds(10);
 
 		///////////////////////////////////
